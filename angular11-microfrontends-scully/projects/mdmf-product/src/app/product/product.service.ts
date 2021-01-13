@@ -20,6 +20,6 @@ export class ProductService {
       { Name: "Chocolate", Price: 1.5, Location: "the Snack isle" },
       { Name: "Self-raising flour", Price: 1.5, Location: "Home baking" },
       { Name: "Ground almonds", Price: 3, Location: "Home baking" },
-    ]).pipe(delay(2000));
+    ]).pipe(delay(200));
   }
 }

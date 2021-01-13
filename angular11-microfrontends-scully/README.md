@@ -114,3 +114,15 @@ plugins: [
 ## Todo
 
 - fix the unit tests
+
+## Scully
+
+cd angular11-microfrontends-scully
+
+- Install packages: `yarn install`
+- Build the shared library `yarn build:shared`
+- Build the mdmf-shell: `yarn build:shell`
+- Serve the Microfrontend 1: `yarn start:profile`
+- Serve the Microfrontend 2: `yarn start:product`
+- Run the scully generation: `yarn scully`
+- Serve the scully generation: `yarn scully:serve`
