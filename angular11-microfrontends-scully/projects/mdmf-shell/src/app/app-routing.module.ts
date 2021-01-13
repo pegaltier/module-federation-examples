@@ -15,6 +15,15 @@ const routes: Routes = [
         exposedModule: "ProfileModule",
       }).then((m) => m.ProfileModule),
   },
+  {
+    path: "product",
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteName: "profile",
+        remoteEntry: "http://localhost:4202/remoteEntry.js",
+        exposedModule: "ProductModule",
+      }).then((m) => m.ProductModule),
+  },
 ];
 
 @NgModule({

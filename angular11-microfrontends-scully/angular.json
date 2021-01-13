@@ -296,7 +296,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/mdmf-product",
             "index": "projects/mdmf-product/src/index.html",
@@ -309,7 +309,8 @@
               "projects/mdmf-product/src/assets"
             ],
             "styles": ["projects/mdmf-product/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "extraWebpackConfig": "projects/mdmf-product/webpack.config.js"
           },
           "configurations": {
             "production": {
@@ -338,18 +339,22 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "extraWebpackConfig": "projects/mdmf-product/webpack.prod.config.js"
             }
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "mdmf-product:build"
+            "browserTarget": "mdmf-product:build",
+            "extraWebpackConfig": "projects/mdmf-product/webpack.config.js",
+            "port": 4202
           },
           "configurations": {
             "production": {
-              "browserTarget": "mdmf-product:build:production"
+              "browserTarget": "mdmf-product:build:production",
+              "extraWebpackConfig": "projects/mdmf-product/webpack.prod.config.js"
             }
           }
         },
@@ -360,7 +365,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "projects/mdmf-product/src/test.ts",
             "polyfills": "projects/mdmf-product/src/polyfills.ts",
@@ -371,7 +376,8 @@
               "projects/mdmf-product/src/assets"
             ],
             "styles": ["projects/mdmf-product/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "extraWebpackConfig": "projects/mdmf-profile/webpack.config.js"
           }
         },
         "lint": {

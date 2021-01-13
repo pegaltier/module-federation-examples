@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MdmfSharedModule } from "../../../../mdmf-shared/src/public-api";
 
@@ -14,7 +13,6 @@ import { ListUserComponent } from "./components/list-user/list-user.component";
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    // StoreDevtoolsModule,
     FormsModule,
     ReactiveFormsModule,
     MdmfSharedModule,

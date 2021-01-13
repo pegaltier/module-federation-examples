@@ -21,7 +21,8 @@ cd angular11-microfrontends-scully
 - Install packages: `yarn install`
 - Build the shared library `yarn build:shared`
 - Start the mdmf-shell: `yarn start:shell`
-- Start the Microfrontend: `yarn start:profile`
+- Start the Microfrontend 1: `yarn start:profile`
+- Start the Microfrontend 2: `yarn start:product`
 - Open the shell http://localhost:4200
 - Click the profile navigation link to load the remote Microfrontend
 
