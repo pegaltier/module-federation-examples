@@ -15,6 +15,7 @@ import {
   metaReducers,
 } from "projects/mdmf-shared/src/lib/app-state/reducer";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
+import { ScullyLibModule } from "@scullyio/ng-lib";
 
 export function initializeApp(
   mfService: MicrofrontendService
@@ -45,6 +46,7 @@ export function initializeApp(
     }),
     // Connects RouterModule with StoreModule, uses MinimalRouterStateSerializer by default
     StoreRouterConnectingModule.forRoot(),
+    ScullyLibModule,
   ],
   providers: [
     MicrofrontendService,

@@ -12,7 +12,9 @@
     "build:product": "ng build mdmf-product --prod",
     "test": "ng test mdmf-shared & ng test mdmf-profile & ng test mdmf-product & ng test mdmf-shell",
     "lint": "ng lint",
-    "e2e": "ng e2e mdmf-profile & ng e2e mdmf-shell"
+    "e2e": "ng e2e mdmf-profile & ng e2e mdmf-shell",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "private": true,
   "resolutions": {
@@ -27,8 +29,11 @@
     "@angular/platform-browser": "11.0.0-rc.2",
     "@angular/platform-browser-dynamic": "11.0.0-rc.2",
     "@angular/router": "11.0.0-rc.2",
-    "@ngrx/store": "^11.0.0-beta.0",
     "@ngrx/router-store": "^11.0.0-beta.0",
+    "@ngrx/store": "^11.0.0-beta.0",
+    "@scullyio/init": "^1.0.1",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "bootstrap": "^4.5.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
