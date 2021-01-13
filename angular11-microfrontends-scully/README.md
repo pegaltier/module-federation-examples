@@ -1,6 +1,6 @@
 # Microfrontends Angular 11
 
-This project shows an example of using Webpack 5 Module Federation with Angular `11.0.0-rc.2` using shared module and NgRx state management.
+This project shows an example of using Webpack 5 Module Federation with Angular `11.0.0-rc.2` using scully for prerendering the product microfrontend
 
 - note the use of **yarn**, this is required to override the webpack version for the angular cli
 - the project was developed based on the the example `angular11-microfrontends`
@@ -16,7 +16,7 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 
 ## Running the demo
 
-cd angular11-microfrontends-ngrx
+cd angular11-microfrontends-scully
 
 - Install packages: `yarn install`
 - Build the shared library `yarn build:shared`
