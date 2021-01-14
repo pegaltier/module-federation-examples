@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
+import { pluck } from "rxjs/operators";
 import { Product, ProductService } from "./product.service";
 
 @Component({
@@ -8,7 +9,9 @@ import { Product, ProductService } from "./product.service";
   styleUrls: ["./product.component.css"],
 })
 export class ProductComponent implements OnInit {
-  products: Observable<Product[]> = this.pruductService.getProducts();
+  products: Observable<Product[]> = this.pruductService
+    .getProducts()
+    .pipe(pluck("data"));
 
   constructor(private pruductService: ProductService) {}
 

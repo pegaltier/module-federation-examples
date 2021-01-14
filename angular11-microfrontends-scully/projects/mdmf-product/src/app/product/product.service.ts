@@ -1,25 +1,27 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { delay } from "rxjs/operators";
+import { environment } from "../../environments/environment";
 
 export interface Product {
-  Name: string;
-  Price: number;
-  Location: string;
+  id: number;
+  name: string;
+  price: number;
+  location: string;
+}
+
+export interface ProductResponse {
+  data: Product[];
 }
 
 @Injectable()
 export class ProductService {
-  constructor() {}
+  constructor(private readonly httpClient: HttpClient) {}
 
-  getProducts(): Observable<Product[]> {
-    return of([
-      { Name: "Cheese", Price: 2.5, Location: "Refrigerated foods" },
-      { Name: "Crisps", Price: 3, Location: "the Snack isle" },
-      { Name: "Pizza", Price: 4, Location: "Refrigerated foods" },
-      { Name: "Chocolate", Price: 1.5, Location: "the Snack isle" },
-      { Name: "Self-raising flour", Price: 1.5, Location: "Home baking" },
-      { Name: "Ground almonds", Price: 3, Location: "Home baking" },
-    ]).pipe(delay(200));
+  getProducts(): Observable<ProductResponse> {
+    return this.httpClient
+      .get<ProductResponse>(`${environment.url}/assets/json/products.json`)
+      .pipe(delay(200)); // simulate real api with 200ms delay
   }
 }

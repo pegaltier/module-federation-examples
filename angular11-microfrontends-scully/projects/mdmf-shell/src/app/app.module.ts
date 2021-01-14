@@ -1,5 +1,6 @@
 import { APP_INITIALIZER, NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 import { ShellModule } from "./shell/shell.module";
 import { AppComponent } from "./app.component";
@@ -27,6 +28,7 @@ export function initializeApp(
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
     MdmfSharedModule,
     StoreModule.forRoot(ROOT_REDUCERS, {

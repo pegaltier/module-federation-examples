@@ -5,5 +5,14 @@ export const config: ScullyConfig = {
   outDir: "./dist/static",
   appPort: 4200,
   extraRoutes: ["/profile", "/product"],
-  routes: {},
+  routes: {
+    "/product/detail/:id": {
+      type: "json",
+      productId: {
+        url: "http://localhost:4202/assets/json/products.json",
+        resultsHandler: (response) => response.data,
+        property: "id",
+      },
+    },
+  },
 };
