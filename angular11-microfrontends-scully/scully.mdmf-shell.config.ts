@@ -13,6 +13,9 @@ export const config: Promise<ScullyConfig> = (async () => {
       "/product/detail/2",
       "/product/detail/3",
       "/product/detail/4",
+      "/product/detail/5",
+      "/product/detail/6",
+      "/product/detail/7",
     ],
     routes: {
       "/product/detail/:productId": {

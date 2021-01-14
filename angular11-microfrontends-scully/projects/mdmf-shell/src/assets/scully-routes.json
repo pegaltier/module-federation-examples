@@ -6,5 +6,8 @@
   { "route": "/product/detail/1" },
   { "route": "/product/detail/2" },
   { "route": "/product/detail/3" },
-  { "route": "/product/detail/4" }
+  { "route": "/product/detail/4" },
+  { "route": "/product/detail/5" },
+  { "route": "/product/detail/6" },
+  { "route": "/product/detail/7" }
 ]
