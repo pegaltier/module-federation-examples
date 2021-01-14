@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { UserActions } from "projects/mdmf-shared/src/lib/app-state/actions";
-import { User } from "../models/User";
+import { User } from "../models/user.model";
 
 export const userFeatureKey = "user";
 

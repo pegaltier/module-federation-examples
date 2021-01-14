@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { pluck, tap } from "rxjs/operators";
-import { Product, ProductService } from "../product.service";
+import { ProductService } from "../product.service";
 import { isScullyGenerated, TransferStateService } from "@scullyio/ng-lib";
+import { Product } from "projects/mdmf-shared/src/lib/app-state/models/product.model";
 
 @Component({
   selector: "app-product",

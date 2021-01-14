@@ -4,7 +4,7 @@ import { StoreModule } from "@ngrx/store";
 import { take } from "rxjs/operators";
 
 import { ProfileComponent } from "projects/mdmf-profile/src/app/profile/components/profile/profile.component";
-import { User } from "projects/mdmf-shared/src/lib/app-state/models/User";
+import { User } from "projects/mdmf-shared/src/lib/app-state/models/user.model";
 import { MdmfSharedModule } from "projects/mdmf-shared/src/lib/modules/mdmf-shared.module";
 import { ListUserComponent } from "./list-user.component";
 import {

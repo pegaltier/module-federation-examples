@@ -1,17 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Product } from "projects/mdmf-shared/src/lib/app-state/models/product.model";
 import { Observable, of } from "rxjs";
 import { delay } from "rxjs/operators";
 import { environment } from "../../environments/environment";
-
-export interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
 
 export interface ProductResponse {
   data: Product[];

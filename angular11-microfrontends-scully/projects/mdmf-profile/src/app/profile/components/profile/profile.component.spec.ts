@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, tick } from "@angular/core/testing";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { StoreModule } from "@ngrx/store";
-import { User } from "projects/mdmf-shared/src/lib/app-state/models/User";
+import { User } from "projects/mdmf-shared/src/lib/app-state/models/user.model";
 import { MdmfSharedModule } from "projects/mdmf-shared/src/lib/modules/mdmf-shared.module";
 import { ProfileComponent } from "./profile.component";
 import {

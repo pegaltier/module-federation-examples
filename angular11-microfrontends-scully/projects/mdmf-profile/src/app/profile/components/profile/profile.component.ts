@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Store } from "@ngrx/store";
 import { UserActions } from "projects/mdmf-shared/src/lib/app-state/actions";
-import { User } from "projects/mdmf-shared/src/lib/app-state/models/User";
+import { User } from "projects/mdmf-shared/src/lib/app-state/models/user.model";
 import { selectUsers } from "projects/mdmf-shared/src/lib/app-state/reducer";
 import { Observable } from "rxjs";
 
@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  constructor(private fb: FormBuilder, private store: Store) {
+  constructor(private readonly fb: FormBuilder, private readonly store: Store) {
     this.angForm = this.createForm();
   }
 

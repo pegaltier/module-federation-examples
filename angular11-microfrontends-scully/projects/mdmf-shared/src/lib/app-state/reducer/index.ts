@@ -17,6 +17,7 @@ import { InjectionToken } from "@angular/core";
  */
 
 import * as fromUser from "./user.reducer";
+import * as fromProduct from "./product.reducer";
 
 /**
  * As mentioned, we treat each reducer like a table in a database. This means
@@ -24,6 +25,7 @@ import * as fromUser from "./user.reducer";
  */
 export interface State {
   [fromUser.userFeatureKey]: fromUser.UserStateModel;
+  [fromProduct.productFeatureKey]: fromProduct.ProductStateModel;
   router: fromRouter.RouterReducerState<any>;
 }
 
@@ -37,6 +39,7 @@ export const ROOT_REDUCERS = new InjectionToken<
 >("Root reducers token", {
   factory: () => ({
     [fromUser.userFeatureKey]: fromUser.reducer,
+    [fromProduct.productFeatureKey]: fromProduct.reducer,
     router: fromRouter.routerReducer,
   }),
 });
@@ -75,6 +78,19 @@ export const selectUserState = createFeatureSelector<
 export const selectUsers = createSelector(
   selectUserState,
   fromUser.selectUsers
+);
+
+/**
+ * Product Selectors
+ */
+export const selectProductState = createFeatureSelector<
+  State,
+  fromProduct.ProductStateModel
+>(fromProduct.productFeatureKey);
+
+export const selectProducts = createSelector(
+  selectProductState,
+  fromProduct.selectProducts
 );
 
 /**

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { User } from "projects/mdmf-shared/src/lib/app-state/models/User";
+import { User } from "projects/mdmf-shared/src/lib/app-state/models/user.model";
 import { UserActions } from "projects/mdmf-shared/src/lib/app-state/actions";
 import { Observable } from "rxjs";
 import { selectUsers } from "projects/mdmf-shared/src/lib/app-state/reducer";

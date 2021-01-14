@@ -12,7 +12,10 @@ import {
   take,
   tap,
 } from "rxjs/operators";
-import { Product, ProductService } from "../product.service";
+import { ProductService } from "../product.service";
+import { Product } from "projects/mdmf-shared/src/lib/app-state/models/product.model";
+import { Store } from "@ngrx/store";
+import { ProductActions } from "projects/mdmf-shared/src/lib/app-state/actions";
 
 @Component({
   selector: "app-product-detail",
@@ -92,6 +95,7 @@ export class ProductDetailComponent implements OnInit {
   );*/
 
   constructor(
+    private readonly store: Store,
     private readonly productService: ProductService,
     private readonly activatedRoute: ActivatedRoute,
     private readonly transferState: TransferStateService
@@ -104,5 +108,6 @@ export class ProductDetailComponent implements OnInit {
       "🚀 ~ file: product-detail.component.ts ~ line 87 ~ ProductDetailComponent ~ addToCart ~ product",
       product
     );
+    this.store.dispatch(ProductActions.addProduct({ product }));
   }
 }
