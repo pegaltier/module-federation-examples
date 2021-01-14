@@ -1,18 +1,28 @@
 import { ScullyConfig } from "@scullyio/scully";
-export const config: ScullyConfig = {
-  projectRoot: "./projects/mdmf-shell/src",
-  projectName: "mdmf-shell",
-  outDir: "./dist/static",
-  appPort: 4200,
-  extraRoutes: ["/profile", "/product"],
-  routes: {
-    "/product/detail/:id": {
-      type: "json",
-      productId: {
-        url: "http://localhost:4202/assets/json/products.json",
-        resultsHandler: (response) => response.data,
-        property: "id",
+export const config: Promise<ScullyConfig> = (async () => {
+  return {
+    projectRoot: "./projects/mdmf-shell/src",
+    projectName: "mdmf-shell",
+    outDir: "./dist/static",
+    appPort: 4200,
+    extraRoutes: [
+      "/profile",
+      "/product",
+      "/product/detail/1",
+      "/product/detail/2",
+      "/product/detail/3",
+      "/product/detail/4",
+    ],
+    routes: {
+      "/product/detail/:productId": {
+        type: "json",
+        productId: {
+          url: "https://fakestoreapi.com/products",
+          // url: "http://localhost:4202/assets/json/products.json",
+          // resultsHandler: (response) => response.data,
+          property: "id",
+        },
       },
     },
-  },
-};
+  } as ScullyConfig;
+})();

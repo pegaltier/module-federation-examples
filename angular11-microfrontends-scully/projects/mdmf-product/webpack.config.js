@@ -24,6 +24,8 @@ module.exports = {
         "@angular/router": { singleton: true, eager: true },
         "@ngrx/store": { singleton: true, eager: true },
         "@ngrx/router-store": { singleton: true, eager: true },
+        "@scullyio/ng-lib": { singleton: true, eager: true },
+        rxjs: { singleton: true, eager: true },
         "mdmf-shared": { singleton: true, eager: true },
       },
     }),

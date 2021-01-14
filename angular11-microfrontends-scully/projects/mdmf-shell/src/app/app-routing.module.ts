@@ -19,11 +19,19 @@ const routes: Routes = [
     path: "product",
     loadChildren: () =>
       loadRemoteModule({
-        remoteName: "profile",
+        remoteName: "product",
         remoteEntry: "http://localhost:4202/remoteEntry.js",
         exposedModule: "ProductModule",
       }).then((m) => m.ProductModule),
   },
+  // debug test:
+  /*
+  {
+    path: "product",
+    loadChildren: () =>
+      import("./../../../mdmf-product/src/app/product/product.module").then((m) => m.ProductModule),
+  },
+  */
 ];
 
 @NgModule({

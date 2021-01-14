@@ -124,5 +124,5 @@ cd angular11-microfrontends-scully
 - Build the mdmf-shell: `yarn build:shell`
 - Serve the Microfrontend 1: `yarn start:profile`
 - Serve the Microfrontend 2: `yarn start:product`
-- Run the scully generation: `yarn scully`
+- Run the scully generation: `yarn scully:route`
 - Serve the scully generation: `yarn scully:serve`

@@ -1,1 +1,9 @@
-[{ "route": "/" }, { "route": "/profile" }, { "route": "/product" }]
+[
+  { "route": "/" },
+  { "route": "/profile" },
+  { "route": "/product" },
+  { "route": "/product/detail/1" },
+  { "route": "/product/detail/2" },
+  { "route": "/product/detail/3" },
+  { "route": "/product/detail/4" }
+]

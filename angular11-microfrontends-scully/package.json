@@ -13,7 +13,9 @@
     "test": "ng test mdmf-shared & ng test mdmf-profile & ng test mdmf-product & ng test mdmf-shell",
     "lint": "ng lint",
     "e2e": "ng e2e mdmf-profile & ng e2e mdmf-shell",
-    "scully": "scully",
+    "scully:light": "scully",
+    "scully:route": "scully --scanRoutes",
+    "scully:debug": "scully --scanRoutes --stats --showGuessError --watch --logSeverity=normal",
     "scully:serve": "scully serve"
   },
   "private": true,
