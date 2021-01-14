@@ -6,9 +6,11 @@ import { environment } from "../../environments/environment";
 
 export interface Product {
   id: number;
-  name: string;
+  title: string;
   price: number;
-  location: string;
+  description: string;
+  category: string;
+  image: string;
 }
 
 export interface ProductResponse {
@@ -23,5 +25,6 @@ export class ProductService {
     return this.httpClient
       .get<ProductResponse>(`${environment.url}/assets/json/products.json`)
       .pipe(delay(200)); // simulate real api with 200ms delay
+    // thanks to https://fakestoreapi.com/ for the fake products
   }
 }

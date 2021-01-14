@@ -12,7 +12,7 @@
 
     <!-- loaded -->
     <div *ngFor="let product of vm.products">
-      {{ product.name }} ({{ product.price }} CHF)
+      {{ product.title }} ({{ product.price }} CHF)
       <a [routerLink]="'/product/detail/' + product.id">>> Detail</a>
     </div>
   </ng-container>

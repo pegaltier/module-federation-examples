@@ -7,10 +7,11 @@
 
     <!-- loaded -->
     <div *ngIf="vm.product">
-      <h2>{{ vm.product.name }}</h2>
+      <h2>{{ vm.product.title }}</h2>
+      <h3>{{ vm.product.category }}</h3>
       <p class="short">
-        <img src="https://via.placeholder.com/250" />
-        {{ vm.product.location }}
+        <img [src]="vm.product.image" />
+        {{ vm.product.description }}
       </p>
     </div>
   </div>
