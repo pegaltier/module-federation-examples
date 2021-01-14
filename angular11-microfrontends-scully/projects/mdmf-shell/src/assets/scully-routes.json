@@ -1,5 +1,6 @@
 [
   { "route": "/" },
+  { "route": "/home" },
   { "route": "/profile" },
   { "route": "/product" },
   { "route": "/product/detail/1" },

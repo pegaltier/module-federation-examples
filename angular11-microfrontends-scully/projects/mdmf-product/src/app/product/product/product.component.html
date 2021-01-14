@@ -6,7 +6,7 @@
     frontend
   </p>
 
-  <ng-container *ngIf="{ products: products | async } as vm">
+  <ng-container *ngIf="{ products: products$ | async } as vm">
     <!-- loading -->
     <div *ngIf="!vm.products">Loading...</div>
 

@@ -6,6 +6,7 @@ export const config: Promise<ScullyConfig> = (async () => {
     outDir: "./dist/static",
     appPort: 4200,
     extraRoutes: [
+      "/home",
       "/profile",
       "/product",
       "/product/detail/1",

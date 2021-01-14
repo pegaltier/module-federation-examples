@@ -68,7 +68,7 @@ export class ProductDetailComponent implements OnInit {
     shareReplay(1)
   );
 
-  // This is an example of using TransferState
+  // This is an example of using TransferState for the product
   public readonly product$ = isScullyGenerated()
     ? this.transferState
         .getState<Product>("product")
