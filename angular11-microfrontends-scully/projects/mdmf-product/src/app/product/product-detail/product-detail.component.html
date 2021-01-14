@@ -1,15 +1,17 @@
-<a routerLink="/product">Back</a>
+<div class="container">
+  <a routerLink="/product">Back</a>
 
-<div *ngIf="{ product: product$ | async } as vm">
-  <!-- loading -->
-  <div *ngIf="!vm.product">Loading...</div>
+  <div *ngIf="{ product: product$ | async } as vm">
+    <!-- loading -->
+    <div *ngIf="!vm.product">Loading...</div>
 
-  <!-- loaded -->
-  <div *ngIf="vm.product">
-    <h1>{{ vm.product.name }}</h1>
-    <p class="short">
-      <img src="https://via.placeholder.com/250" />
-      {{ vm.product.location }}
-    </p>
+    <!-- loaded -->
+    <div *ngIf="vm.product">
+      <h2>{{ vm.product.name }}</h2>
+      <p class="short">
+        <img src="https://via.placeholder.com/250" />
+        {{ vm.product.location }}
+      </p>
+    </div>
   </div>
 </div>
