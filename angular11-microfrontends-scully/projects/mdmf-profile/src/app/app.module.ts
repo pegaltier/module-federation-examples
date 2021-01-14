@@ -6,12 +6,12 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { StoreModule } from "@ngrx/store";
+import { StoreRouterConnectingModule } from "@ngrx/router-store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import {
   ROOT_REDUCERS,
   metaReducers,
 } from "projects/mdmf-shared/src/lib/app-state/reducer";
-import { StoreRouterConnectingModule } from "@ngrx/router-store";
 
 @NgModule({
   declarations: [AppComponent],
