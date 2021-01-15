@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
 
   // this is the simple solution to get the products without using TransferState
   /*
-  public readonly products2$: Observable<
+  public readonly products$: Observable<
     Product[]
   > = this.pruductService.getProducts().pipe(pluck("data"));
   */

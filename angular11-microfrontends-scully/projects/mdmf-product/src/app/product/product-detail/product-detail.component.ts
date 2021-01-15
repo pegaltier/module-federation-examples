@@ -27,21 +27,9 @@ export class ProductDetailComponent implements OnInit {
   public readonly productId$: Observable<
     number
   > = this.activatedRoute.params.pipe(
-    tap((val) => {
-      console.log(
-        "🚀 ~ file: product-detail.component.ts ~ line 26 ~ ProductDetailComponent ~ val",
-        val
-      );
-    }),
     pluck("productId"),
     filter((val) => ![undefined, null].includes(val)),
     map((val) => parseInt(val, 10)),
-    tap((val) => {
-      console.log(
-        "🚀 ~ file: product-detail.component.ts ~ line 29 ~ ProductDetailComponent ~ val",
-        val
-      );
-    }),
     shareReplay(1)
   );
 
@@ -49,18 +37,8 @@ export class ProductDetailComponent implements OnInit {
     switchMap((id) =>
       this.productService.getProducts().pipe(
         pluck("data"),
-        map((products) => {
-          const product = products.find((p) => p.id === +id);
-          console.log(
-            "🚀 ~ file: product-detail.component.ts ~ line 36 ~ ProductDetailComponent ~ product",
-            product
-          );
-          return product;
-        }),
+        map((products) => products.find((p) => p.id === +id)),
         catchError(() => {
-          console.log(
-            "🚀 ~ file: product-detail.component.ts ~ line 59 ~ ProductDetailComponent ~ catchError"
-          );
           return of({
             id: id,
             title: "not found",
@@ -85,7 +63,7 @@ export class ProductDetailComponent implements OnInit {
 
   // this is the simple solution to get the product without using TransferState
   /*
-  public readonly product2$: Observable<Product> = forkJoin([
+  public readonly product$: Observable<Product> = forkJoin([
     this.activatedRoute.params.pipe(pluck("productId"), take(1)),
     this.productService.getProducts().pipe(pluck("data")),
   ]).pipe(
@@ -104,10 +82,6 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {}
 
   addToCart(product: Product): void {
-    console.log(
-      "🚀 ~ file: product-detail.component.ts ~ line 87 ~ ProductDetailComponent ~ addToCart ~ product",
-      product
-    );
     this.store.dispatch(ProductActions.addProduct({ product }));
   }
 }

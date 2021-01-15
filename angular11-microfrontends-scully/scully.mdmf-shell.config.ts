@@ -17,10 +17,10 @@ export const config: Promise<ScullyConfig> = (async () => {
     projectName: "mdmf-shell",
     outDir: "./dist/static",
     appPort: 4200,
-    // the extraRoutes config traverse routes from external source (MF)
+    // the extraRoutes config traverses routes from external source (MF)
     extraRoutes: extraRoutesPromise,
+    // the routes config traverses the local source only (NO MF)
     routes: {
-      // the routes config we traverse the local source only (NO MF)
       // https://github.com/scullyio/scully/issues/1203
       /*
       "/product/detail/:productId": {
